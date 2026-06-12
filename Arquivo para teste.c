@@ -16,7 +16,7 @@ int main() {
     char estado2 = 'B';
     char codigo[50], codigo2[50], nome_da_cidade[50], cidade2[50];   
     unsigned long int população = 11904961, população2 = 6730729;
-    int turisticos = 30, turisticos2 = 50;
+    int turisticos = 50, turisticos2 = 30;
     float área = 1521.11, área2 = 1200.25, PIB = 1066825105, PIB2 = 418462360, Poder1, Poder2;
 
 //Carta1
@@ -203,6 +203,15 @@ printf("\n\nComparar atributos das cartas?\n");
                 default:
                 printf("Opção inválida, tente novamente.");
                 break;
+
+                printf("\nValor da 1º comparação: %d\nValor da 2º comparação: %d\n", resultado1, resultado2);
+                if (resultado1 == 1 && resultado2 == 1) {
+                    printf("***Resultado***\nA carta %s venceu!\n", nome_da_cidade);
+                } else if (resultado1 == 0 && resultado2 == 0) {
+                    printf("***Resultado***\nA carta %s venceu!", cidade2);
+                } else {
+                    printf("***Resultado***\nEmpatou!\n");
+                }
             }
             }//Fechamento do else
         break;
@@ -221,19 +230,10 @@ printf("\n\nComparar atributos das cartas?\n");
   
 //Resultado
 
-    printf("\nValor da 1º comparação: %d\nValor da 2º comparação: %d\n", resultado1, resultado2);
-    if (resultado1 == 1 && resultado2 == 1) {
-        printf("***Resultado***\nA carta %s venceu!\n", nome_da_cidade);
-    } else if (resultado1 == 0 && resultado2 == 0) {
-        printf("***Resultado***\nA carta %s venceu!", cidade2);
-    } else {
-        printf("***Resultado***\nEmpatou!\n");
-    }
+   
 
 
 
-
-      
     return 0;
 }
     //Carta1
