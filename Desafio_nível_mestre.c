@@ -125,7 +125,7 @@ printf("\n\nComparar atributos das cartas?\n");
                 resultado1 = área > área2 ? 1 : 0;
                 break;
                 case 3:
-                printf("PIB da carta %s: %.2f\nPIB da carta %s: %.2f\n", nome_da_cidade, PIB, cidade2, PIB2);
+                printf("PIB da carta %s: R$ %.2f\nPIB da carta %s: R$ %.2f\n", nome_da_cidade, PIB, cidade2, PIB2);
                 resultado1 = PIB > PIB2 ? 1 : 0;
                 break;
                 case 4:
@@ -137,7 +137,7 @@ printf("\n\nComparar atributos das cartas?\n");
                 resultado1 = densidadeP < densidadeP2 ? 1 : 0;
                 break;
                 case 6:
-                printf("PIB per capita da carta %s: %.2f\nPIB per capita da carta %s: %.2f\n", nome_da_cidade, PIBpercapita, cidade2, PIBpercapita2);
+                printf("PIB per capita da carta %s: %.2f reais\nPIB per capita da carta %s: %.2f reais\n", nome_da_cidade, PIBpercapita, cidade2, PIBpercapita2);
                 resultado1 = PIBpercapita > PIBpercapita2 ? 1 : 0;
                 case 7:
                 printf("Poder da carta %s: %.2f\nPoder da carta %s: %.2f\n", nome_da_cidade, Poder1, cidade2, Poder2);
@@ -171,7 +171,7 @@ printf("\n\nComparar atributos das cartas?\n");
                 resultado2 = área > área2 ? 1 : 0;
                 break;
                 case 3:
-                printf("PIB da carta %s: %.2f\nPIB da carta %s: %.2f\n", nome_da_cidade, PIB, cidade2, PIB2);
+                printf("PIB da carta %s: R$ %.2f\nPIB da carta %s: R$ %.2f\n", nome_da_cidade, PIB, cidade2, PIB2);
                 resultado2 = PIB > PIB2 ? 1 : 0;
                 break;
                 case 4:
@@ -183,8 +183,9 @@ printf("\n\nComparar atributos das cartas?\n");
                 resultado2 = densidadeP < densidadeP2 ? 1 : 0;
                 break;
                 case 6:
-                printf("PIB per capita da carta %s: %.2f\nPIB per capita da carta %s: %.2f\n", nome_da_cidade, PIBpercapita, cidade2, PIBpercapita2);
+                printf("PIB per capita da carta %s: %.2f reais\nPIB per capita da carta %s: R$ %.2f reais\n", nome_da_cidade, PIBpercapita, cidade2, PIBpercapita2);
                 resultado2 = PIBpercapita > PIBpercapita2 ? 1 : 0;
+                break;
                 case 7:
                 printf("Poder da carta %s: %.2f\nPoder da carta %s: %.2f\n", nome_da_cidade, Poder1, cidade2, Poder2);
                 resultado2 = Poder1 > Poder2 ? 1 : 0;
@@ -192,6 +193,7 @@ printf("\n\nComparar atributos das cartas?\n");
                 default:
                 printf("Opção inválida, tente novamente.");
                 break;
+                }//Fechamento do if-else
 
                 printf("\nValor da 1º comparação: %d\nValor da 2º comparação: %d\n", resultado1, resultado2);
                 if (resultado1 == 1 && resultado2 == 1) {
@@ -201,16 +203,17 @@ printf("\n\nComparar atributos das cartas?\n");
                 } else {
                     printf("***Resultado***\nEmpatou!\n");
                 }
-            }
-            }//Fechamento do else
+            }//Fechamento do switch (atributo2)           
         break;
         case 2:
         printf("Saindo....\n");
         break;
         case 3:
-        printf("1. O atributo com o maior valor vence\n");
+        printf("1. Você escolherá dois atributos para comparar.\n(Ex. Se você escolher População, o programa irá comparar a população da carta 1 com a carta 2)\n");
         printf("2. O atributo 'Densidade populacional', diferente dos outros, a carta com o menor valor vence\n");
-        printf("3. Divirta-se\n");
+        printf("3.1 O valor 1 significa que a carta (1) ganhou a comparação, o valor (0) signfica que a carta 2 ganhou a comparação.\n");
+        printf("3.2 Se uma das cartas ganhar as duas comparações ela vence, se as duas ganharem uma das duas comparações a partida teminará empatada!\n");
+        printf("4. Divirta-se\n");
         break;
         default:
         printf("Opção inválida, tente novamente\n");
