@@ -228,7 +228,7 @@ printf("\n\nComparar atributos das cartas?\n");
         break;
     }
   
-//Resultado
+
 
    
 
